@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="canonical" href="{{ BlogLink `http://example.com` }}">
+  <meta name="description" content="{{ BlogDescription `Blog about underblog` }}">
+  <title>{{ BlogTitle "My Blog" }}</title>
+</head>
+<body>
+  <div class="container">
+    <h1>My blog</h1>
+    <ul>
+      {{ range . }}
+        <li><a href="/posts/{{ .Slug }}/">{{ .Title }}</a> ({{ .Date.Format "Jan 02, 2006" }})</li>
+      {{ end }}
+    </ul>
+  </div>
+</body>
+</html>
