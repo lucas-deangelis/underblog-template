@@ -3,7 +3,7 @@ fetch:
 		| grep download.*linux-amd64.* \
 		| cut -d '"' -f 4 \
 		| wget -qi -
-		tar -xvf underblog-linux-amd64-v0.2.3.tar.gz
+		tar -xvf underblog-linux-amd64-v*.tar.gz
 		mv linux-amd64/underblog .
 
 build:
